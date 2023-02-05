@@ -1,0 +1,37 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <filter>
+  	<filter-name>IdFilter</filter-name>
+  	<display-name>IdFilter</display-name>
+  	<description></description>
+  	<filter-class>com.tharindu.web.filters.IdFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>IdFilter</filter-name>
+  	<url-pattern>/getPerson</url-pattern>
+  </filter-mapping>
+  <servlet>
+  	<servlet-name>GetPersonController</servlet-name>
+  	<display-name>GetPersonController</display-name>
+  	<description></description>
+  	<servlet-class>com.tharindu.web.GetPersonController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Check</servlet-name>
+  	<display-name>Check</display-name>
+  	<description></description>
+  	<servlet-class>com.tharindu.web.Check</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>GetPersonController</servlet-name>
+  	<url-pattern>/getPerson</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Check</servlet-name>
+  	<url-pattern>/check</url-pattern>
+  </servlet-mapping>
+</web-app>
